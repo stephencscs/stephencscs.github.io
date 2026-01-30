@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephen的网站</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        .success-badge {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            margin: 20px 0;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .url-box {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 25px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 1.2em;
+            word-break: break-all;
+            border: 2px solid #4CAF50;
+        }
+        .instructions {
+            background: #e8f5e9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: left;
+        }
+        .instructions h3 {
+            color: #2e7d32;
+            margin-top: 0;
+        }
+        .instructions ol {
+            padding-left: 20px;
+        }
+        .instructions li {
+            margin: 10px 0;
+        }
+        .mobile-test {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 网站创建成功！</h1>
+        <div class="success-badge">✅ GitHub Pages 已启用</div>
+        
+        <p>恭喜！你的个人网站已经部署完成。</p>
+        
+        <div class="url-box" id="url-display">
+            https://stephencscs.github.io
+        </div>
+        
+        <div class="instructions">
+            <h3>📱 手机访问步骤：</h3>
+            <ol>
+                <li>打开手机浏览器</li>
+                <li>输入上方绿色框中的网址</li>
+                <li>点击访问即可看到此页面</li>
+            </ol>
+        </div>
+        
+        <div class="mobile-test">
+            <h3>📲 立即测试：</h3>
+            <p>用另一台手机或电脑访问：</p>
+            <p style="font-weight: bold; color: #1565c0;">
+                https://stephencscs.github.io
+            </p>
+        </div>
+        
+        <div style="margin-top: 30px; color: #666;">
+            <p><strong>GitHub用户名:</strong> stephencscs</p>
+            <p><strong>仓库名称:</strong> stephencscs.github.io ✓</p>
+            <p><strong>状态:</strong> 配置正确</p>
+        </div>
+    </div>
+    
+    <script>
+        // 显示当前URL
+        const url = window.location.href;
+        document.getElementById('url-display').textContent = url;
+        
+        // 检查是否访问正确
+        if (!url.includes('stephencscs.github.io')) {
+            document.querySelector('.url-box').innerHTML = 
+                '⚠️ 请通过正确的网址访问：<br>' +
+                '<strong>https://stephencscs.github.io</strong>';
+            document.querySelector('.url-box').style.borderColor = '#ff9800';
+        }
+    </script>
+</body>
+</html>
